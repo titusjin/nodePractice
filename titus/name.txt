@@ -1,4 +1,4 @@
-[object Object]var describeFunction = function(){
+var describeFunction = function(){
 	return 'I am a CommonJS Module';
 }
 
