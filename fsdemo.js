@@ -21,6 +21,7 @@ var copyFileStream = fs.createReadStream('./describe.js');
 
 var copyFile = function(name, buffer){
     fs.appendFile(name, buffer);
+    return true;
 }
 
 var p1 = new Promise(function(resolve, reject){
