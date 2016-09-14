@@ -11,40 +11,50 @@ function copyFileCallback(err){
         //     console.log('stat : ' + JSON.stringify(stat));
         // });
         console.log('file content copy complete.');
-    }    
+    }
 }
 
-var copyFileStream = fs.createReadStream('./describe.js');
+var copyFileStream = fs.createReadStream('./bufferDemo.js');
 // copyFileStream.on('data', (chunk) => {
 //     console.log('receive data chunk  : ' + chunk);
 // });
 
 var copyFile = function(name, buffer){
     fs.appendFile(name, buffer);
-    return true;
 }
 
 var p1 = new Promise(function(resolve, reject){
-    
+
     fs.mkdir('./titus', (err) => {
         if(!err || err.code == 'EEXIST'){
             console.log('start to copyfile');
 
             resolve('./titus/name.txt');
-            
+
         }else{
             console.error(err);
             reject('PLEASE TRY AGAIN');
         }
-    });    
+    });
 });
+
+var sayHello = function(){
+    return new Promise(function(resolve, reject){
+        resolve('titus');
+    });
+}
 
 p1.then(
     function(filename){
         copyFile(filename, copyFileStream._readableState.buffer);
+        return sayHello();
     },
     function(message){
         console.log(message);
+    }
+).then(
+    function(name){
+        console.log('hello '+ name);
     }
 );
 
