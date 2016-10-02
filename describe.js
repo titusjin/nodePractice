@@ -1,5 +1,3 @@
-fjdkcaojla,mfkljdoga
-
 var describeFunction = function(){
 	return 'I am a CommonJS Module';
 }
