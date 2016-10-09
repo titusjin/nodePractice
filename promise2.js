@@ -83,7 +83,7 @@ function test(){
 }
 
 
-console.log('final result : ' + await(test()));
+console.log('final result : ' + test());
 
 // fs.mkdir('./titus', (err) => {
 //     if(!err || err.code == 'EEXIST'){

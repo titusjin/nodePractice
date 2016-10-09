@@ -14,7 +14,7 @@ const Promise = require('promise');
 //      }
 //  }
 
-var copyFileStream = fs.createReadStream('bufferdemo.js');
+var copyFileStream = fs.createReadStream('package.json');
 
 function copyFile(){
     return new Promise(function(resolve, reject){
@@ -47,7 +47,6 @@ function makeFileDir(){
         });
     });
 }
-
 
 makeFileDir().then(
     function(message){
