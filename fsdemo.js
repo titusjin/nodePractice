@@ -14,7 +14,7 @@ function copyFileCallback(err){
     }
 }
 
-var copyFileStream = fs.createReadStream('./bufferDemo.js');
+var copyFileStream = fs.createReadStream('./test.txt');
 // copyFileStream.on('data', (chunk) => {
 //     console.log('receive data chunk  : ' + chunk);
 // });
@@ -55,6 +55,13 @@ p1.then(
 ).then(
     function(name){
         console.log('hello '+ name);
+
+        try{
+            fs.statSync('./titus/named.txt');
+            console.log('YES !!!');
+        }catch(err){
+            console.log(err);
+        }
     }
 );
 

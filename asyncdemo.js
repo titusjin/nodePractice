@@ -37,15 +37,14 @@ function copyFile(sorceName, destName){
     });
 }
 
-
 var foo = async(function(){
     var result = await(mkdir('./titus'));
-
-    console.log(result);
 
     if(result){
         await(copyFile('test.txt' , './titus/name.txt'));
     }
+
+    return result;
 });
 
 foo();
