@@ -94,12 +94,12 @@ function makeXML(jsonData){
                                         {link  : 'http://www.storm.mg'},
                                         {guid  : [{
                                                     _attr : {
-                                                        'isPermaLink' : "Hello\n Great\r\nWorld}".replace(/\r?\n/g, "")
+                                                        'isPermaLink' : source[0].article_content.replace(/\r?\n/g, "")
                                                     }},
                                                     parseInt('1345678') + 160000000]
                                         },
                                         {'content:encoded' :
-                                            {_cdata : 'i\'m not escaped: <xml>!● <a href=\'http://www.storm.mg/article/#{id}?utm_source=Yahoo&utm_medium=%E7%9B%B8%E9%97%9C%E5%A0%B1%E5%B0%8E%E9%BB%9E%E6%93%8A&utm_campaign=Y!News_RelatedCoverage\' target=\'_blank\'>#{title}</a><br />'}
+                                            {_cdata : source[0].article_content.replace(/\r?\n/g, "")}
                                         }
                                     ]
                             }

@@ -7,5 +7,7 @@ console.log(new Date().getTime());
 
 console.log(moment().subtract(30, 'minutes').valueOf());
 
-console.log(moment().format('YYYY/MM/DD h:mm'));
+console.log(moment.unix(1476147601).format('YYYY/MM/DD hh:mm'));
+
+
 
