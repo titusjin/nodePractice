@@ -147,7 +147,7 @@ function prepareXMLData(array){
 }
 
 function doSecond(xmlFeeds){
-    console.log('YES YES YES YES YES YES YES ');
+    console.log('YES YES YES YES YES YES YES NO NO NO');
     console.log(xmlFeeds);
 }
 
