@@ -178,6 +178,6 @@ function* doIt(){
 
 var gen = doIt();
 var xmlFeeds = gen.next().value;
-gen.next(xmlFeeds);
-gen.next(xmlFeeds);
+gen.next();
+// gen.next();
 
