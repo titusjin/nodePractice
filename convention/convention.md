@@ -11,10 +11,7 @@ function MyClass () {
 	};
 }
 ```
-+ **require include module：**大寫開頭駝峰式
-``` js
-var Nodemailer = require('nodemailer');
-```
+
 + **Function**：小寫開頭駝峰式
 ``` js
 function mainFunction(){ 
