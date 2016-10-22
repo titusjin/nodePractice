@@ -17,3 +17,25 @@
     "xml2js": "^0.4.17"
   }
 }
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "nodejs practice",
+  "main": "app.js",
+  "repository": "private",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "titusjin",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "ftp": "^0.3.10",
+    "lodash" : "4.16.4",
+    "moment" : "^2.15.1",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "xml" : "^1.0.1",
+    "xml2js": "^0.4.17"
+  }
+}
