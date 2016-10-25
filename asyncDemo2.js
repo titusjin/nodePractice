@@ -37,9 +37,9 @@ var sayYes = function(){
 }
 
 // async calling promise
-async(function doIt(){
+var doIt = async(function(){
     await(sayhello());
-}());
+});
 
 
 doIt();

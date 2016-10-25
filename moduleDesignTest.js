@@ -2,4 +2,9 @@
 
 var moduleDesign = require('./moduleDesign');
 
-moduleDesign.sayhello('titus');
+moduleDesign.sayhello().then(function(data){
+    console.log(data);
+    return moduleDesign.sendMessage('hello deepblu');
+}).then(function(data){
+    console.log(data);
+});
