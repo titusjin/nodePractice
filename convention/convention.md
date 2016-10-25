@@ -11,10 +11,7 @@ function MyClass () {
 	};
 }
 ```
-+ **require include module：**大寫開頭駝峰式
-``` js
-var Nodemailer = require('nodemailer');
-```
+
 + **Function**：小寫開頭駝峰式
 ``` js
 function mainFunction(){ 
@@ -164,17 +161,17 @@ if (a == '') {
 }
 
 ```
-+ 使用多行的三元運算符
++ 使用單行的三元運算符
 ```js
 //正確
-var foo = (a === b)
-  ? 1
-  : 2;
+var foo = (a === b) ? 1 : 2;
 ```
 
 ```js
 //錯誤
-var foo = (a === b) ? 1 : 2;
+var foo = (a === b)
+  ? 1
+  : 2;
 
 ```
 + 較複雜的判斷式先存在Boolean變數再使用，增加可讀性
