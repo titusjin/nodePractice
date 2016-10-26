@@ -9,5 +9,48 @@
         </div>
         <div style="background-image: url('/Users/develop01/Desktop/luchadortocat.png'); width: 100px; height: 100px; background-size:     100% auto; margin: 0 auto;">
         </div>
+        <div>
+            <p>沈隨後赴飯店與妻女團圓，三人見面時相擁而泣，沈直說「我對不起她們」。
+
+            他表示，一開始以為很快就能釋放，未料船東的承諾變卦。幾年來船員頻遭海盜威脅，海盜一度揚言「一天不派人來談判，就殺一個」，還曾對人質開槍；他每天活在惶恐中，三、四年後開始慢慢麻痺。漫長的囚禁歲月，他是靠著航海經驗，觀察月亮盈虧才知時日。
+
+            沈瑞章受訪時還提到，遭囚期間，晚餐只有一碗白米飯加一百ＣＣ的糖水，早餐吃春捲皮，吃不到水果，只要談判破裂，連水都喝不到。「那個地方白天四十幾度沒有水很難過」；沈說，抓老鼠吃很平常，越南、柬埔寨漁工甚至吃火烤的蠍子、蜈蚣。
+
+            他說，前幾天海盜突然告知，要放他們走，當下還以為被耍，每個船員都未整理行李，直到當天下午三時多，來了三部車，他才相信真的獲釋了。
+
+            在得知要走一段六、七小時長的陸路時，他心生不安，擔憂海盜氾濫的索馬利亞可能出現黑吃黑。果然，中途兩度遭遇其他派系海盜攔截，雙方槍戰。
+
+            他說，獲釋後得知兩岸很多善心人士幫忙，心情稍微平靜，原來「社會沒有把我遺忘掉」。講到哥哥、妹妹掛念他安危，四處奔走，他一度哽咽難以言語。
+            </p>
+        </div>
+        <script>
+            // 更動讀者選取的網頁文字
+            function addLink() {
+                console.log('in listener');
+
+                //Get the selected text and append the extra info
+                var selection = window.getSelection(),
+                    pagelink = '<br /><br /> Read more at: ' + document.location.href,
+                    copytext = selection + pagelink,
+                    newdiv = document.createElement('div');
+
+                selection = selection.toString() += copytext;
+                console.log(selection.toString());
+
+                //hide the newly created container
+                newdiv.style.position = 'absolute';
+                newdiv.style.left = '-99999px';
+
+                //insert the container, fill it with the extended text, and define the new selection
+                document.body.appendChild(newdiv);
+                newdiv.innerHTML = copytext;
+                selection.selectAllChildren(newdiv);
+
+                window.setTimeout(function () {
+                    document.body.removeChild(newdiv);
+                }, 100);
+            }
+            document.addEventListener('copy', addLink);
+        </script>
     </body>
 </html>
