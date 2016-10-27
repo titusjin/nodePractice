@@ -26,16 +26,11 @@
         <script>
             // 更動讀者選取的網頁文字
             function addLink() {
-                console.log('in listener');
-
                 //Get the selected text and append the extra info
                 var selection = window.getSelection(),
-                    pagelink = '<br /><br /> Read more at: ' + document.location.href,
-                    copytext = selection + pagelink,
+                    pagePrefix = '轉自風傳媒 - ',
+                    copytext = pagePrefix + selection ,
                     newdiv = document.createElement('div');
-
-                selection = selection.toString() += copytext;
-                console.log(selection.toString());
 
                 //hide the newly created container
                 newdiv.style.position = 'absolute';

@@ -38,8 +38,8 @@ var sayYes = function(){
 
 // async calling promise
 var doIt = async(function(){
-    await(sayhello());
+    await(sayHello());
 });
 
-
 doIt();
+
