@@ -1,37 +1,25 @@
-'use strict';
+// 'use strict';
 
 const Promise = require('promise');
-
-// var make = function(){
-//     var result = {name : 'fjdklfjasl'};
-//
-//     result.hello = () => {
-//         console.log(this);
-//         console.log(this.name);
-//     }
-//
-//     return result;
-// };
-//
-// var ins = make();
-// ins.hello();
-
-// var test1 = {greet: 'happy'};
-// var message = function(){
-//     console.log(this.greet);
-// };
-// test1.sayMessage = message;
-//
-// console.log(test1.greet);
-//
-// test1.sayMessage();
-
+const moment = require('moment');
 
 var sendMessage = (function(){
+    // 'use strict';
+
+    console.log(this);
+
     var result = {
         name: 'deeeeeeee',
+        getToday(){
+            return moment().format('YYYY/MM/DD hh:mm');
+        },
         sayhello(){
+            var todayStr = () => this.getToday();
+
+            console.log(todayStr());
             return new Promise(function(resolve, reject){
+                console.log(this);
+
                 console.log('I am in sayHello promise');
                 resolve('good Timothey');
             });
