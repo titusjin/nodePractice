@@ -5,8 +5,8 @@ conding style for nodejs
 + **Class Function：**大寫開頭駝峰式
 ``` js
 function MyClass () {
-	var privateVariable; 
-	this.privilegedMethod = function () { 
+	var privateVariable;
+	this.privilegedMethod = function () {
     	//..
 	};
 }
@@ -14,7 +14,7 @@ function MyClass () {
 
 + **Function**：小寫開頭駝峰式
 ``` js
-function mainFunction(){ 
+function mainFunction(){
     //do something
 };
 ```
@@ -30,17 +30,17 @@ const PI = 3.1416;
 ``` js
 var UserSchema = Mongoose.Schema({
    name : String,
-   age : Number 
+   age : Number
 });
 ```
 + **mongoose property**：小寫開頭駝峰式命名
 ``` js
 var UserSchema = Mongoose.Schema({
    name : String,
-   age : Number 
+   age : Number
 });
 ```
-+ **config 檔案名稱**：後置詞以底線+config方式命名，並統一放在config目錄底下,資料庫連線相關設定檔，統一以database.js命名，全域型的設定檔則統一以config.js命名。若有需要區分開發環境專屬的設定檔，請另外加上前置詞dev_ 
++ **config 檔案名稱**：後置詞以底線+config方式命名，並統一放在config目錄底下,資料庫連線相關設定檔，統一以database.js命名，全域型的設定檔則統一以config.js命名。若有需要區分開發環境專屬的設定檔，請另外加上前置詞dev_
 ``` js
 //全域設定檔
 config/config.js
@@ -184,10 +184,16 @@ if (isValidPassword) {
 ```
 
 ```js
++ 字串相加使用 += instead of concat
+```js
+//正確
+var hello = 'hello,';
+console.log(hello += 'kelvin');
+```
+
+```js
 //錯誤
-if (password.length >= 4 && /^(?=.*\d).{4,}$/.test(password)) {
-  console.log('losing');
-}
+console.log(hello.concat('kelvin'));
 
 ```
 + 廻圈中的判斷值先存在變數再使用，以增加運算效率
@@ -266,7 +272,7 @@ function isPercentage(val) {
     } else {
         validate = false;
     }
-    
+
     return validate;
 }
 
@@ -339,7 +345,7 @@ User.findOne({ name: 'foo' }).populate('bar')
 ```js
 /**
 * 記錄Log
-* @param  {string} 訊息字串 
+* @param  {string} 訊息字串
 */
 function logSomething(str){
  console.log(str);
