@@ -10,11 +10,13 @@
   "author": "titusjin",
   "license": "MIT",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "cheerio": "^0.22.0",
     "downloader": "^0.1.2",
     "ftp": "^0.3.10",
     "lodash" : "4.16.4",
     "moment" : "^2.15.1",
+    "mysql-promise": "~1.4.0",
     "request": "^2.75.0",
     "request-promise": "^4.1.1",
     "wget": "^0.0.1",
