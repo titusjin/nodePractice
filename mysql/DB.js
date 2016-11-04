@@ -24,8 +24,8 @@ DB.one = async(function(sql, params){
         .then(rows => {
             return rows[0];
         }));
+        
     return result;
-    // console.log(result);
 });
 
 module.exports = DB;
