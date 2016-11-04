@@ -13,18 +13,18 @@ const cfOption = {
 
 const conn = mysql2nativePromise.createConnection(cfOption);
 
-var DB = function(sql, params) {
+var DB = async(function(sql, params) {
     return conn.then(function(connection){
         return connection.execute(sql, params);
     });
-};
+});
 
 DB.one = async(function(sql, params){
     var result = await(DB(sql, params)
         .then(rows => {
             return rows[0];
         }));
-        
+
     return result;
 });
 
