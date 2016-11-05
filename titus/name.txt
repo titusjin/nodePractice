@@ -1,20 +1,28 @@
-var describeFunction = function(){
-	return 'I am a CommonJS Module';
-}
+jclkalan
+jkdlanclknasio
+titus 
+jfkdnaon
+fjdkcaojla,mfkljdoga
 
-var exposedFunciton = function(){
-	return describeFunction();
-}
+jclkalan
+jkdlanclknasio
+titus 
+jfkdnaon
+fjdkcaojla,mfkljdoga
 
-function jin(){
-	this.firstname = 'titus';
-	this.lastname = 'jin';
-	this.exposeName = function(){
-		return this.firstname+this.lastname;
-	}	
-}
+jclkalan
+jkdlanclknasio
+titus 
+jfkdnaon
+fjdkcaojla,mfkljdoga
 
+jclkalan
+jkdlanclknasio
+titus 
+jfkdnaon
+fjdkcaojla,mfkljdoga
 
+<<<<<<< HEAD
 /**
   * There is lots different method for the exports 
   * usage.
@@ -754,3 +762,5 @@ function jin(){
 // }
 
 module.exports = new jin();
+=======
+>>>>>>> 85ec9200668ab5f4d971a943975057c21e305c6d

@@ -1,0 +1,30 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "nodejs practice",
+  "main": "app.js",
+  "repository": "private",
+  "scripts": {
+    "build": "babel ./mysql/mysqlTest.js --out-file ./mysql/mysqltest-compiled.js  --presets"
+  },
+  "author": "titusjin",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "cheerio": "^0.22.0",
+    "downloader": "^0.1.2",
+    "ftp": "^0.3.10",
+    "lodash": "4.16.4",
+    "moment": "^2.15.1",
+    "mysql-promise": "~1.4.0",
+    "mysql2": "^1.1.1",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "wget": "^0.0.1",
+    "xml": "^1.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
