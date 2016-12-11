@@ -10,22 +10,24 @@ var sayHello = function(){
 
 var sayYes = function(){
     return new Promise(function(resolve, reject){
+        console.log('in sayYes promise');
         resolve('titus');
+    }).then(function(resolve, reject){
+        console.log('in sayYes then...');
+        return new Promise(function(resolve, reject){
+            resolve('nothing');
+        });
     });
 }
 
 sayHello().then(
     function(name){
         console.log('hello '+ name);
-        var promistinst = sayYes();
 
-        console.log('let me check : ');
-        console.log(promistinst);
-
-        return promistinst;
+        return sayYes();
     }
 ).then(
-    function(name){
-        console.log('yes  ' + name);
+    function(message){
+        console.log('in end success then');
     }
 );
