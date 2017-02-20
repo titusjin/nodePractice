@@ -20,8 +20,16 @@ console.log(moment().utcOffset());
 
 // moment(current).utcOffset().format('YYYY-MM-DD HH:mm:ssZ');
 let utc0 = moment(current).utcOffset(0).toISOString();
-console.log(utc0);
 console.log(moment().toISOString());
+
+console.log('test local');
+console.log(utc0);
+console.log(moment(utc0).local().format());
+console.log('the iso week might like : ');
+
+var weekTestYear = moment('2017-01-01').format('YYYY');
+console.log(weekTestYear);   // 2017
+console.log(moment('2017-01-01').week()); // 1
 
 console.log(moment(moment().toISOString()).utcOffset(10).format('YYYY-MM-DD HH:mm:ssZ'));
 

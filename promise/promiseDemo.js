@@ -14,7 +14,7 @@ const Promise = require('promise');
 //      }
 //  }
 
-var copyFileStream = fs.createReadStream('package.json');
+var copyFileStream = fs.createReadStream('../package.json');
 
 function copyFile(){
     return new Promise(function(resolve, reject){
@@ -51,17 +51,20 @@ function makeFileDir(){
 makeFileDir().then(
     function(message){
         console.log(message);
-        return copyFile();
+        // return message;
     },
     function(messaeg){
         console.log('reject : ' + message);
     }
 ).then(
     function(message){
-        console.log('hello');
-        console.log(message);
-    },
-    function(message){
-        console.log(message);
+        console.log('no need to pass proise in to second round...');
     }
+    // function(message){
+    //     console.log('hello');
+    //     console.log(message);
+    // },
+    // function(message){
+    //     console.log(message);
+    // }
 );
