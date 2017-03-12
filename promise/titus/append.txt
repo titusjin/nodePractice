@@ -1,0 +1,105 @@
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "nodejs practice",
+  "main": "app.js",
+  "repository": "private",
+  "scripts": {
+    "build": "babel ./mysql/mysqlTest.js --out-file ./mysql/mysqltest-compiled.js  --presets"
+  },
+  "author": "titusjin",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "asyncawait": "^1.0.6",
+    "axios": "^0.15.2",
+    "cheerio": "^0.22.0",
+    "downloader": "^0.1.2",
+    "ftp": "^0.3.10",
+    "lodash": "^4.17.2",
+    "moment": "^2.15.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql-promise": "~1.4.0",
+    "mysql2": "^1.1.1",
+    "promise": "^7.1.1",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "uuid": "^2.0.3",
+    "wget": "^0.0.1",
+    "xml": "^1.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "nodejs practice",
+  "main": "app.js",
+  "repository": "private",
+  "scripts": {
+    "build": "babel ./mysql/mysqlTest.js --out-file ./mysql/mysqltest-compiled.js  --presets"
+  },
+  "author": "titusjin",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "asyncawait": "^1.0.6",
+    "axios": "^0.15.2",
+    "cheerio": "^0.22.0",
+    "downloader": "^0.1.2",
+    "ftp": "^0.3.10",
+    "lodash": "^4.17.2",
+    "moment": "^2.15.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql-promise": "~1.4.0",
+    "mysql2": "^1.1.1",
+    "promise": "^7.1.1",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "uuid": "^2.0.3",
+    "wget": "^0.0.1",
+    "xml": "^1.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
+{
+  "name": "nodepractice",
+  "version": "1.0.0",
+  "description": "nodejs practice",
+  "main": "app.js",
+  "repository": "private",
+  "scripts": {
+    "build": "babel ./mysql/mysqlTest.js --out-file ./mysql/mysqltest-compiled.js  --presets"
+  },
+  "author": "titusjin",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "asyncawait": "^1.0.6",
+    "axios": "^0.15.2",
+    "cheerio": "^0.22.0",
+    "downloader": "^0.1.2",
+    "ftp": "^0.3.10",
+    "lodash": "^4.17.2",
+    "moment": "^2.15.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql-promise": "~1.4.0",
+    "mysql2": "^1.1.1",
+    "promise": "^7.1.1",
+    "request": "^2.75.0",
+    "request-promise": "^4.1.1",
+    "uuid": "^2.0.3",
+    "wget": "^0.0.1",
+    "xml": "^1.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}
