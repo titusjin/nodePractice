@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>just some css test</title>
+        <style>
+        /*.test:before {
+            content: '';
+            position: fixed;
+
+                seudo class element is default set display: inline
+
+            display: block;
+            z-index: -1;
+            width: 500px;
+            height: 300px;
+            background-size: cover;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) ), url("https://download.unsplash.com/photo-1428604467652-115d9d71a7f1");
+            filter: blur(4px);
+        }*/
+        .test {
+            width: 50%;
+            height: 30%;
+        }
+
+        .test p {
+            text-align: center;
+            font-size: 24px;
+            color: black;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            /*width: 30% auto;*/
+        }
+        p:hover {
+            background-color: yellow;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="test">
+            <p>Beautiful image with floor fade</p>
+        </div>
+        <form>
+            <input type="text" id="test1" onkeypress="make()" />
+        </form>
+        <script>
+            function make(){
+                console.log('hello wolrd');
+            }
+        </script>
+    </body>
+</html>
