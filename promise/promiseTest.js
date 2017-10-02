@@ -7,13 +7,15 @@ const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
 const API_KEY = "?key=PAPERCLIP1234";
 
 let doTest = () => {
+    let successResult = null;
     return axios.get(`${ROOT_URL}/posts${API_KEY}`)
                 .then( result => {
-                    // console.log('IN axios then ', result);
-                    return result;
+                    console.log('IN axios then ', result);
+                    return result
                 })
                 .catch( err => {
-                    // console.log('FAIL +++++++++');
+                    console.log( err );
+                    return {name: `ACIOS_FAIL`, 500}
                 });
 }
 let doTest2 = (i) => {
@@ -23,8 +25,8 @@ let doTest2 = (i) => {
                     return result;
                 })
                 .catch( err => {
-                    // console.log('IN axios catch ', err);
-                    return {name: `AXIOS_FAIL`, status: err.response.status};
+                    console.log('IN axios catch ', err);
+                    return {name: `AXIOS_FAIL`, status: 500};
                 });
 }
 
@@ -34,7 +36,7 @@ let doStart = () => {
     for( let i = 0 ; i < 3 ; i++ ){
         console.log(i);
 
-        if( i == 1 ){
+        if( i == 2 ){
             promiseArray.push( doTest2(i) );
         }else{
             promiseArray.push( doTest() );
