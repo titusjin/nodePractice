@@ -1,3 +1,9 @@
+/**
+ *      This is one es6 syntax suger:
+ *
+ *
+ */
+
 'use strict';
 
 const props = {videos : [{title: 'Lion', length: '1.5 **'},{title: 'Before flood', length: '1 *'}, {title: 'ToyStory2', length: '2 **'}]};
