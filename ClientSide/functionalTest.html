@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script     src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js">
+        </script>
+        <!-- <script src="./curry/curryImplement.browserify.js"></script> -->
+    </head>
+    <body>
+        <script>
+        var memoize = function(f) {
+            var cache = {};
+
+            return function() {
+                var arg_str = JSON.stringify(arguments);
+                cache[arg_str] = cache[arg_str] || f.apply(f, arguments);
+                return cache[arg_str];
+            };
+        };
+
+        // var pureHttpCall = memoize($.getJSON);
+        // console.log(pureHttpCall("http://reduxblog.herokuapp.com/api/posts?key=PAPERCLIP1234"));
+
+        //  the original example from 電子書是：
+        //
+        var pureHttpCall = memoize((url , params) => {
+          return function() { return $.getJSON(url, params); }
+        });
+
+        let httpcall = pureHttpCall("http://reduxblog.herokuapp.com/api/posts?key=PAPERCLIP1234");
+        console.log(httpcall());
+        console.log('--------------------------------------------------------');
+
+        /**
+         * Curry structure
+         */
+        var curry_match = _.curry((what , str) =>{
+            return str.match(what);
+        });
+        console.log(curry_match(/\o+/g, 'hello world'));
+        console.log(curry_match(/\o+/g)('NO_SPACE'));
+
+        var curryMap = _.curry( (f, collection) => {
+            return collection.map(f);
+        });
+        var matchArr = curryMap(curry_match(/\o+/g));
+        console.log(matchArr(['hello world', 'YES SPoCE']));
+
+
+        </script>
+    </body>
+</html>
