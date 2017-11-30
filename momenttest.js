@@ -108,3 +108,5 @@ console.log(moment('2017-08-12').format('M'));
 
 console.log(moment('10/6/2017', 'DD/MM/YYYY').format('D'));
 console.log(moment().format('MM/DD/YYYY'));
+
+console.log(moment('2017-09-24T05:51:31.000Z').toISOString());
