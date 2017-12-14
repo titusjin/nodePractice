@@ -10,9 +10,6 @@ let origin = [
 
 let temp = 0;
 let sum = origin.reduce((acu, cur) => {
-    console.log('pre: ', acu);
-    console.log('cur: ', cur);
-
     return acu += cur.rat;
 }, 0);
 
