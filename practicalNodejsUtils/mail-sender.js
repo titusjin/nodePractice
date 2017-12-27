@@ -2,7 +2,7 @@
  * Generatic mail sender
  *
  * @since 2017.03.30
- * @author titus@deeplbu.com
+ * @author titus
  */
 
 'use strict';
