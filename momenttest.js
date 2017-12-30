@@ -102,28 +102,9 @@ console.log(moment('2017/08/01').endOf('day').format('YYYY-MM-DD HH:mm ZZ'));
 console.log(moment('2017-08-01').utcOffset(0).unix());
 console.log('end');
 
-<<<<<<< HEAD
 console.log(moment().valueOf().toString());
 console.log(moment(parseInt('1513482567331', 10)).format('MMMM Do YYYY, h:mm:ss a'));
 
 
 console.log(moment('2017-01-01T00:00:00+0800', moment.ISO_8601).valueOf());
 console.log(moment('2017-12-01T23:59:59+0800', moment.ISO_8601).valueOf());
-=======
-console.log(moment().valueOf());
-console.log(moment(1505959320000).toISOString());
-
-
-console.log(moment('2017-08-12').format('M'));
-
-console.log(moment('10/6/2017', 'DD/MM/YYYY').format('D'));
-console.log(moment().format('MM/DD/YYYY'));
-
-console.log(moment('2017-09-24T05:51:31.000Z').toISOString());
-
-console.log('++++++++++++++++++++++++++++++++++++');
-console.log(moment(1489744803).toISOString());
-console.log(moment(1489744806).toISOString());
-console.log(moment(1489744808).toISOString());
-console.log(moment(1489744810).toISOString());
->>>>>>> c67ec3a609a84425dc1a1b630c914e3394fb1dc3
