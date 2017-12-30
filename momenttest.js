@@ -101,6 +101,9 @@ console.log(moment('2017-08-01').startOf('day').utcOffset(0).format('YYYY-MM-DD 
 console.log(moment('2017-08-01').utcOffset(0).unix());
 console.log('end');
 
-console.log(moment().valueOf());
-console.log(moment(1505959320000).toISOString());
-1505959320000
+console.log(moment().valueOf().toString());
+console.log(moment(parseInt('1513482567331', 10)).format('MMMM Do YYYY, h:mm:ss a'));
+
+
+console.log(moment('2017-01-01T00:00:00+0800', moment.ISO_8601).valueOf());
+console.log(moment('2017-12-01T23:59:59+0800', moment.ISO_8601).valueOf());
