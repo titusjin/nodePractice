@@ -11,7 +11,7 @@ let doTest = () => {
     return axios.get(`${ROOT_URL}/posts${API_KEY}`)
                 .then( result => {
                     console.log('IN axios then ', result);
-                    return result
+                    return result;
                 })
                 .catch( err => {
                     console.log( err );
