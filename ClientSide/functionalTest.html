@@ -32,19 +32,48 @@
         console.log('--------------------------------------------------------');
 
         /**
-         * Curry structure
+         *  using curry helper function to transform one known function
          */
         var curry_match = _.curry((what , str) =>{
             return str.match(what);
         });
         console.log(curry_match(/\o+/g, 'hello world'));
-        console.log(curry_match(/\o+/g)('NO_SPACE'));
+        console.log(curry_match(/\O+/g)('NO_SPACE'));
 
         var curryMap = _.curry( (f, collection) => {
             return collection.map(f);
         });
         var matchArr = curryMap(curry_match(/\o+/g));
         console.log(matchArr(['hello world', 'YES SPoCE']));
+
+        /**
+         * Try to make one simple curry helper function
+         */
+        let spacePattern = /\s+/g;
+        let matchT = function( pattern, str ){
+            if(pattern && str){
+                return function(){
+                    return str.match(pattern);
+                }
+            }else{
+                if(str){
+                    return function(pattern){
+                        return str.match(pattern);
+                    }
+                }else{
+                    return function(str){
+                        return str.match(pattern);
+                    }
+                }
+            }
+        }
+
+        let curry_spacePattern = matchT(spacePattern);
+        // we can do more differnt pattern as a function and pass differnt words into that function to test if matching different pattern or not.
+
+        console.log(curry_spacePattern('hello world'));
+        console.log(curry_spacePattern('NO_SPACE'));
+
 
 
         </script>
