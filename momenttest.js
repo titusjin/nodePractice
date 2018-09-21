@@ -108,3 +108,10 @@ console.log(moment(parseInt('1513482567331', 10)).format('MMMM Do YYYY, h:mm:ss 
 
 console.log(moment('2017-01-01T00:00:00+0800', moment.ISO_8601).valueOf());
 console.log(moment('2017-12-01T23:59:59+0800', moment.ISO_8601).valueOf());
+
+
+console.log('++++++++++++ final ++++++++++++++');
+let ori = moment('2018-02-06 20:11:00 +8');
+test = moment('2018-03-02 18:30:01 +8');
+console.log(ori.diff(test));
+console.log(ori.endOf('day').format('YYYY-MM-DD HH:mm:ss ZZ'));
