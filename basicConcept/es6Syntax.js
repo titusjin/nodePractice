@@ -1,7 +1,7 @@
 /**
- *      This is one es6 syntax suger:
+ * Test ES6 related syntax
  *
- *
+ * @author titus
  */
 
 'use strict';
