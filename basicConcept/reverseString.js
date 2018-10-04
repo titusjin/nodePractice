@@ -3,7 +3,7 @@
  */
 function reverseStr1(input){
   try{
-    let s = input.split('');
+      let s = input.split('');
       let resultArray = [];
       
       let length = s.length;
@@ -37,8 +37,19 @@ function reverseStr2(input){
   return input;
 }
 
+/**
+ * very simple one by using directly of javascript array fuction reverse
+ * code will only have O(1) but depends on underlying reverse function complexity
+ */
+function reverseStr3(input){
+  let result = input.split('').reverse().join('');
+  return result;
+}
+
 let res1 = reverseStr1('Grindr is one big company and suitable place for titus!')
-let res2 = reverseStr1('Grindr efg');
+let res2 = reverseStr1('Titus In Grindr is great!');
+let res3 = reverseStr3('Titus In Grindr is great!');
 
 console.log(res1);
 console.log(res2);
+console.log(res3);
