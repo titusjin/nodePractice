@@ -46,12 +46,39 @@ function LinkedList(){
     this.length++;
   }
 
+  this.insert = function(position, element){
+    let node = new Node(element);
+    let index = 0 , current = this.head, previous = null;
+    
+    if(position == 0 ){
+      node.next = this.head;
+      this.head = node;
+      return true;
+    }else if(position == this.length ){
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+    } else{
+      if(position > 0 && position < this.length){
+        while(index++ < position){
+          previous = current;
+          current = current.next;
+        }
+        previous.next = node;
+        node.next = current;
+        return true;
+      }else{
+        return false;
+      }
+    }
+  }
+
   this.removeItem = function(position){
     let index = 0, current = this.head, previous = null;
     
     if(position > -1 && position < this.length){
       
-
       /**
        * solution 1
        * TWO different while loop actually do the same thing
@@ -59,18 +86,18 @@ function LinkedList(){
        */
       if(position === 0 ){
         this.head = current.next;
+      }else{
+        while(index++ < position){
+          previous = current;
+          current = current.next;
+        }
+        // while(index < position){
+        //   previous = current;
+        //   current = current.next;
+        //   index++;
+        // }
+        previous.next = current.next;
       }
-      while(index++ < position){
-        previous = current;
-        current = current.next;
-      }
-      // while(index < position){
-      //   previous = current;
-      //   current = current.next;
-      //   index++;
-      // }
-
-      previous.next = current.next;
       
       this.length--;
       return true;
@@ -89,6 +116,7 @@ testLinkedList.append('2');
 testLinkedList.append('3');
 
 testLinkedList.removeItem(0);
+testLinkedList.insert(2,'0');
 
 // test length and toString()
 console.log(testLinkedList.length);
