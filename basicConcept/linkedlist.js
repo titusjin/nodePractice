@@ -13,11 +13,19 @@ function LinkedList(){
   this.toString = () =>{
     let current = this.head, result = '';
     
-    while(current.next){
+    /**
+     *  TWo different while but do the same thing
+     */
+    while(current){
       result += current.element.toString();
       current = current.next;
     }
-    return result += (current.element);
+    return result;
+    // while(current.next){
+    //   result += current.element.toString();
+    //   current = current.next;
+    // }
+    // return result += (current.element);
   }
 
 
@@ -41,10 +49,17 @@ function LinkedList(){
   this.removeItem = function(position){
     let index = 0, current = this.head, previous = null;
     
-    if(position >= 0 && position < this.length){
+    if(position > -1 && position < this.length){
       
-      // TWO different while loop actually do the same thing
-      // But the above one minus one running
+
+      /**
+       * solution 1
+       * TWO different while loop actually do the same thing
+       * But the above one minus one running
+       */
+      if(position === 0 ){
+        this.head = current.next;
+      }
       while(index++ < position){
         previous = current;
         current = current.next;
@@ -73,7 +88,7 @@ testLinkedList.append('1');
 testLinkedList.append('2');
 testLinkedList.append('3');
 
-testLinkedList.removeItem(1);
+testLinkedList.removeItem(0);
 
 // test length and toString()
 console.log(testLinkedList.length);
