@@ -17,8 +17,7 @@ function cal1(input){
 
 /**
  * it is just one 等差數列計算公式
- * As a result, I don't have 
- * 
+ * cost only O(1)
  */
 function cal2(input){
   let now = new Date().getMilliseconds();

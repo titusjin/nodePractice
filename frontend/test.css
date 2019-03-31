@@ -31,3 +31,15 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.file-area {
+    width: 100px;
+    height: 100px;
+    background-color: #ff0;
+}
+
+.file-upload {
+    position: absolute;
+    opacity: 0;
+    font-size: 0;
+}
