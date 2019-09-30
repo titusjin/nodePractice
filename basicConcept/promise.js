@@ -31,11 +31,7 @@ const pro = new Promise( (p1, p2) => {
 });
 
 pro
-  .then(()=>{
-
-  },()=>{
-    
-  })
+  .then()
   .catch(error => {
     console.log('trigger error section:',error.message);
   });
